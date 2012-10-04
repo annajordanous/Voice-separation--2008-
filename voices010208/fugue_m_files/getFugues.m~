@@ -1,0 +1,17 @@
+function fugues = getFugues
+% fugues = getFugues
+%
+% This needs to be run from the directory
+% /Applications/MATLAB74/work/fugues
+%
+
+cd /Applications/MATLA
+for i=1:48
+    if i<10 
+        fugues{i} = readmidi(strcat('../fugues/wtc1f0', int2str(i),'.mid'));
+    elseif i<=24 
+        fugues{i} = readmidi(strcat('../fugues/wtc1f', int2str(i),'.mid'));       
+    else
+        fugues{i} = readmidi(strcat('../fugues/wtc2f', int2str(i),'.mid'));
+    end
+end
